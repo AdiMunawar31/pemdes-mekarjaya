@@ -33,7 +33,7 @@ class PresenceTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Masuk",
+                      "Jam Masuk",
                       style: TextStyle(fontSize: 12),
                     ),
                     const SizedBox(height: 6),
@@ -53,14 +53,14 @@ class PresenceTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Keluar",
+                      "Jam Pulang",
                       style: TextStyle(fontSize: 12),
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      (presenceData["keluar"] == null)
+                      (presenceData["pulang"] == null)
                           ? "-"
-                          : DateFormat.Hms().format(DateTime.parse(presenceData["keluar"]["tanggal"])),
+                          : DateFormat.Hms().format(DateTime.parse(presenceData["pulang"]["tanggal"])),
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,

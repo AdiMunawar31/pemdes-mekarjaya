@@ -63,7 +63,7 @@ class PresenceCard extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.only(bottom: 6),
                         child: const Text(
-                          "Masuk",
+                          "Jam Masuk",
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.white,
@@ -95,7 +95,7 @@ class PresenceCard extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.only(bottom: 6),
                         child: const Text(
-                          "Keluar",
+                          "Jam Pulang",
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.white,
@@ -103,9 +103,9 @@ class PresenceCard extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        (todayPresenceData?["keluar"] == null)
+                        (todayPresenceData?["pulang"] == null)
                             ? "-"
-                            : DateFormat.Hms().format(DateTime.parse(todayPresenceData!["keluar"]["tanggal"])),
+                            : DateFormat.Hms().format(DateTime.parse(todayPresenceData!["pulang"]["tanggal"])),
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w700,

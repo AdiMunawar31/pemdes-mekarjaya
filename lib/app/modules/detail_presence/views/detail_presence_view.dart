@@ -17,7 +17,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Presence Detail',
+          'Detail Presensi',
           style: TextStyle(
             color: AppColor.secondary,
             fontSize: 14,
@@ -66,7 +66,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'Masuk',
+                          'Jam Masuk',
                           style: TextStyle(color: Colors.white),
                         ),
                         const SizedBox(height: 4),
@@ -112,7 +112,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
             ),
           ),
           const SizedBox(height: 24),
-          //! Keluar =============================================================================================
+          //! Pulang =============================================================================================
           Container(
             width: MediaQuery.of(context).size.width,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
@@ -134,12 +134,12 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Keluar',
+                          'Jam Pulang',
                           style: TextStyle(color: AppColor.secondary),
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          (presenceData["keluar"] == null) ? "-" : "${presenceData["keluar"]["jam"]}",
+                          (presenceData["pulang"] == null) ? "-" : "${presenceData["pulang"]["jam"]}",
                           style: TextStyle(color: AppColor.secondary, fontSize: 16, fontWeight: FontWeight.w600),
                         ),
                       ],
@@ -158,7 +158,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  (presenceData["keluar"]?["in_area"] == true) ? "Didalam Area" : "Diluar Area",
+                  (presenceData["pulang"]?["in_area"] == true) ? "Didalam Area" : "Diluar Area",
                   style: TextStyle(color: AppColor.secondary, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 14),
@@ -168,7 +168,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  (presenceData["keluar"] == null) ? "-" : "Desa ${presenceData["keluar"]["lokasi"]}",
+                  (presenceData["pulang"] == null) ? "-" : "Desa ${presenceData["pulang"]["lokasi"]}",
                   style: TextStyle(
                     color: AppColor.secondary,
                     fontSize: 14,

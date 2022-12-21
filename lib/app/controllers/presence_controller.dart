@@ -4,6 +4,7 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:pemdes_mekarjaya/app/routes/app_pages.dart';
 import 'package:pemdes_mekarjaya/app/widgets/dialog/custom_alert_dialog.dart';
 import 'package:pemdes_mekarjaya/app/widgets/toast/custom_toast.dart';
 import 'package:pemdes_mekarjaya/company_data.dart';
@@ -62,27 +63,22 @@ class PresenceController extends GetxController {
   ) async {
     CustomAlertDialog.showPresenceAlert(
       title: "Apakah anda ingin absen masuk?",
-      message: "Anda perlu mengkonfirmasi sebelum Anda melakukan kehadiran sekarang",
+      message: "Anda perlu mengkonfirmasi QR Code sebelum Anda melakukan kehadiran sekarang",
       onCancel: () => Get.back(),
       onConfirm: () async {
-        await presenceCollection.doc(todayDocId).set(
-          {
-            "tanggal": DateTime.now().toIso8601String(),
-            "masuk": {
-              "tanggal": DateTime.now().toIso8601String(),
-              "jam": jam,
-              "hari": hari,
-              "latitude": position.latitude,
-              "longitude": position.longitude,
-              "lokasi": address,
-              "in_area": inArea,
-              "jarak": distance.toStringAsFixed(2),
-              "keterangan": keterangan
-            }
-          },
-        );
-        Get.back();
-        CustomToast.successToast("Berhasil", "Berhasil absen masuk");
+        Map<String, dynamic> data = {
+          "tanggal": DateTime.now().toIso8601String(),
+          "jam": jam,
+          "hari": hari,
+          "latitude": position.latitude,
+          "longitude": position.longitude,
+          "lokasi": address,
+          "in_area": inArea,
+          "jarak": distance.toStringAsFixed(2),
+          "keterangan": keterangan,
+        };
+
+        Get.toNamed(Routes.SCAN_QR, arguments: data);
       },
     );
   }
@@ -100,27 +96,22 @@ class PresenceController extends GetxController {
   ) async {
     CustomAlertDialog.showPresenceAlert(
       title: "Apakah anda ingin absen masuk?",
-      message: "Anda perlu mengkonfirmasi sebelum Anda melakukan kehadiran sekarang",
+      message: "Anda perlu mengkonfirmasi QR Code sebelum Anda melakukan kehadiran sekarang",
       onCancel: () => Get.back(),
       onConfirm: () async {
-        await presenceCollection.doc(todayDocId).set(
-          {
-            "tanggal": DateTime.now().toIso8601String(),
-            "masuk": {
-              "tanggal": DateTime.now().toIso8601String(),
-              "jam": jam,
-              "hari": hari,
-              "latitude": position.latitude,
-              "longitude": position.longitude,
-              "lokasi": address,
-              "in_area": inArea,
-              "jarak": distance.toStringAsFixed(2),
-              "keterangan": keterangan
-            }
-          },
-        );
-        Get.back();
-        CustomToast.successToast("Berhasil", "Berhasil absen masuk");
+        Map<String, dynamic> data = {
+          "tanggal": DateTime.now().toIso8601String(),
+          "jam": jam,
+          "hari": hari,
+          "latitude": position.latitude,
+          "longitude": position.longitude,
+          "lokasi": address,
+          "in_area": inArea,
+          "jarak": distance.toStringAsFixed(2),
+          "keterangan": keterangan,
+        };
+
+        Get.toNamed(Routes.SCAN_QR, arguments: data);
       },
     );
   }
@@ -136,26 +127,22 @@ class PresenceController extends GetxController {
     String hari,
   ) async {
     CustomAlertDialog.showPresenceAlert(
-      title: "Apakah anda ingin absen keluar?",
-      message: "Anda perlu mengkonfirmasi sebelum Anda melakukan kehadiran sekarang",
+      title: "Apakah anda ingin absen pulang?",
+      message: "Anda perlu mengkonfirmasi QR Code sebelum Anda melakukan kehadiran sekarang",
       onCancel: () => Get.back(),
       onConfirm: () async {
-        await presenceCollection.doc(todayDocId).update(
-          {
-            "keluar": {
-              "tanggal": DateTime.now().toIso8601String(),
-              "jam": jam,
-              "hari": hari,
-              "latitude": position.latitude,
-              "longitude": position.longitude,
-              "lokasi": address,
-              "in_area": inArea,
-              "jarak": distance.toStringAsFixed(2),
-            }
-          },
-        );
-        Get.back();
-        CustomToast.successToast("Berhasil", "Berhasil absen keluar");
+        Map<String, dynamic> data = {
+          "tanggal": DateTime.now().toIso8601String(),
+          "jam": jam,
+          "hari": hari,
+          "latitude": position.latitude,
+          "longitude": position.longitude,
+          "lokasi": address,
+          "in_area": inArea,
+          "jarak": distance.toStringAsFixed(2),
+        };
+
+        Get.toNamed(Routes.SCAN_QR, arguments: data);
       },
     );
   }
@@ -179,7 +166,7 @@ class PresenceController extends GetxController {
       inArea = true;
     }
 
-    String keterangan = 'Telat';
+    String keterangan = 'Terlambat';
     if (jamSekarang <= 8) {
       keterangan = 'Tepat Waktu';
     }
@@ -195,15 +182,15 @@ class PresenceController extends GetxController {
         Map<String, dynamic>? dataPresenceToday = todayDoc.data();
 
         // ? : sudah absen masuk
-        if (dataPresenceToday?["keluar"] != null) {
-          // ? : sudah absen masuk dan keluar
-          CustomToast.successToast("Berhasil", "Anda sudah absen masuk dan keluar");
+        if (dataPresenceToday?["pulang"] != null) {
+          // ? : sudah absen masuk dan pulang
+          CustomToast.successToast("Berhasil", "Anda sudah absen masuk dan pulang");
         } else {
-          // ? : sudah absen masuk tapi belum absen keluar
-          if (jamSekarang >= 13 && jamSekarang <= 15) {
+          // ? : sudah absen masuk tapi belum absen pulang
+          if (jamSekarang >= 12 && jamSekarang <= 15) {
             checkoutPresence(presenceCollection, todayDocId, position, address, distance, inArea, jam, hari);
           } else {
-            CustomToast.errorToast("Error", "Anda hanya bisa absen keluar pada jam 13:00 - 14:30");
+            CustomToast.errorToast("Error", "Anda hanya bisa absen pulang pada jam 13:00 - 14:30");
           }
         }
       } else {
