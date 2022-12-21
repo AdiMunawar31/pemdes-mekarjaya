@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1085475706334",
+    "project_id": "pemdesmekarjaya-838d9",
+    "storage_bucket": "pemdesmekarjaya-838d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085475706334:android:c1c0a1e19eafe58e91b94f",
+        "android_client_info": {
+          "package_name": "com.mekarjaya.pemdes_mekarjaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085475706334-55qt33h8i97resamjmmtcdpgb846gq3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMPcLwvGvuDfIlqn0DVU1hLbXKrmh6i9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085475706334-55qt33h8i97resamjmmtcdpgb846gq3q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1085475706334-dsl90e1gsainlmk8jb32937iaoi09gab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pemdesMekarjaya"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
