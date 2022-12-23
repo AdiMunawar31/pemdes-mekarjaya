@@ -33,9 +33,9 @@ class PresenceController extends GetxController {
 
       // print(placemarks[0]);
 
-      DateTime now = DateTime.now();
-      String jamString = DateFormat.Hms().format(now).split(':').first;
-      var jam = int.parse(jamString);
+      // DateTime now = DateTime.now();
+      // String jamString = DateFormat.Hms().format(now).split(':').first;
+      // var jam = int.parse(jamString);
 
       if (distance <= 15) {
         await processPresence(position, address, distance);
@@ -167,7 +167,7 @@ class PresenceController extends GetxController {
     }
 
     String keterangan = 'Terlambat';
-    if (jamSekarang <= 8) {
+    if (jamSekarang < 8) {
       keterangan = 'Tepat Waktu';
     }
 
@@ -187,7 +187,7 @@ class PresenceController extends GetxController {
           CustomToast.successToast("Berhasil", "Anda sudah absen masuk dan pulang");
         } else {
           // ? : sudah absen masuk tapi belum absen pulang
-          if (jamSekarang >= 12 && jamSekarang <= 15) {
+          if (jamSekarang > 12 && jamSekarang < 15) {
             checkoutPresence(presenceCollection, todayDocId, position, address, distance, inArea, jam, hari);
           } else {
             CustomToast.errorToast("Error", "Anda hanya bisa absen pulang pada jam 13:00 - 14:30");

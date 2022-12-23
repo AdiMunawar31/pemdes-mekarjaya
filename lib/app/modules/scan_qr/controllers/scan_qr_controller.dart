@@ -15,22 +15,6 @@ class ScanQrController extends GetxController {
 
   String scannedQr = '';
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
   Future<void> scanQR() async {
     try {
       scannedQr = await FlutterBarcodeScanner.scanBarcode('#37B6F8', 'Cancel', true, ScanMode.QR);
@@ -142,7 +126,7 @@ class ScanQrController extends GetxController {
           CustomToast.successToast("Berhasil", "Anda sudah absen masuk dan pulang");
         } else {
           // ? : sudah absen masuk tapi belum absen pulang
-          if (jamSekarang >= 12 && jamSekarang <= 15) {
+          if (jamSekarang > 12 && jamSekarang < 15) {
             checkoutPresence(presenceCollection, todayDocId);
           } else {
             CustomToast.errorToast("Error", "Anda hanya bisa absen pulang pada jam 13:00 - 14:30");

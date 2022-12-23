@@ -143,7 +143,7 @@ class NewPasswordView extends GetView<NewPasswordController> {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 18),
                         elevation: 0,
-                        primary: AppColor.primary,
+                        backgroundColor: AppColor.primary,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),

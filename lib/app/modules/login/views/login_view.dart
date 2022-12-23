@@ -160,7 +160,7 @@ class LoginView extends GetView<LoginController> {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 18),
                         elevation: 0,
-                        primary: AppColor.primary,
+                        backgroundColor: AppColor.primary,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -183,7 +183,7 @@ class LoginView extends GetView<LoginController> {
                   child: TextButton(
                     onPressed: () => Get.toNamed(Routes.FORGOT_PASSWORD),
                     style: TextButton.styleFrom(
-                      primary: AppColor.secondarySoft,
+                      backgroundColor: AppColor.secondarySoft,
                     ),
                     child: const Text("Lupa Password?"),
                   ),

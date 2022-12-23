@@ -20,6 +20,7 @@ abstract class Routes {
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
   static const SCAN_QR = _Paths.SCAN_QR;
   static const SUCCESS = _Paths.SUCCESS;
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
   static const SPLASH_SCREEN = '/splash-screen';
   static const SCAN_QR = '/scan-qr';
   static const SUCCESS = '/success';
+  static const SPLASH = '/splash';
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pemdes_mekarjaya/app/routes/app_pages.dart';
@@ -70,7 +68,7 @@ class ScanQrView extends GetView<ScanQrController> {
                 ),
               ),
 
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
 
               // Back to home button
               SizedBox(
@@ -87,9 +85,9 @@ class ScanQrView extends GetView<ScanQrController> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'KEMBALI KE HOME',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'poppins',
                     ),

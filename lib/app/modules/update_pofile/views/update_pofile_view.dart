@@ -41,7 +41,7 @@ class UpdatePofileView extends GetView<UpdatePofileController> {
                 }
               },
               style: TextButton.styleFrom(
-                primary: AppColor.primary,
+                backgroundColor: AppColor.primary,
               ),
               child: Text((controller.isLoading.isFalse) ? 'Selesai' : 'Loading...'),
             ),

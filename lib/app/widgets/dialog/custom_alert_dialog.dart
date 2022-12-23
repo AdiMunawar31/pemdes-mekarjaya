@@ -60,7 +60,7 @@ class CustomAlertDialog {
                     onPressed: onCancel,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 12),
-                      primary: AppColor.primaryExtraSoft,
+                      backgroundColor: AppColor.primaryExtraSoft,
                       elevation: 0,
                       onPrimary: AppColor.primary,
                     ),
@@ -76,7 +76,7 @@ class CustomAlertDialog {
                   child: ElevatedButton(
                     onPressed: onConfirm,
                     style: ElevatedButton.styleFrom(
-                      primary: AppColor.primary,
+                      backgroundColor: AppColor.primary,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       elevation: 0,
                     ),
@@ -139,7 +139,7 @@ class CustomAlertDialog {
                     onPressed: onCancel,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 12),
-                      primary: AppColor.primaryExtraSoft,
+                      backgroundColor: AppColor.primaryExtraSoft,
                       elevation: 0,
                       onPrimary: AppColor.primary,
                     ),
@@ -155,7 +155,7 @@ class CustomAlertDialog {
                   child: ElevatedButton(
                     onPressed: onConfirm,
                     style: ElevatedButton.styleFrom(
-                      primary: AppColor.primary,
+                      backgroundColor: AppColor.primary,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       elevation: 0,
                     ),
@@ -219,7 +219,7 @@ class CustomAlertDialog {
                     onPressed: onCancel,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 12),
-                      primary: AppColor.primaryExtraSoft,
+                      backgroundColor: AppColor.primaryExtraSoft,
                       elevation: 0,
                       onPrimary: AppColor.primary,
                     ),
@@ -235,7 +235,7 @@ class CustomAlertDialog {
                   child: ElevatedButton(
                     onPressed: onConfirm,
                     style: ElevatedButton.styleFrom(
-                      primary: AppColor.primary,
+                      backgroundColor: AppColor.primary,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       elevation: 0,
                     ),

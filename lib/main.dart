@@ -35,7 +35,8 @@ void main() async {
           return GetMaterialApp(
             title: "Application",
             debugShowCheckedModeBanner: false,
-            initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+            // initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+            initialRoute: Routes.SPLASH,
             getPages: AppPages.routes,
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,

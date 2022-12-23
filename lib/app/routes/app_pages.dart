@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:pemdes_mekarjaya/app/modules/splash/bindings/splash_binding.dart';
+import 'package:pemdes_mekarjaya/app/modules/splash/views/splash_view.dart';
 
 import '../modules/add_employee/bindings/add_employee_binding.dart';
 import '../modules/add_employee/views/add_employee_view.dart';
@@ -36,6 +38,11 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
+    ),
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
