@@ -40,9 +40,9 @@ class UpdatePofileView extends GetView<UpdatePofileController> {
                   controller.updateProfile();
                 }
               },
-              style: TextButton.styleFrom(
-                backgroundColor: AppColor.primary,
-              ),
+              // style: TextButton.styleFrom(
+              //   backgroundColor: AppColor.primary,
+              // ),
               child: Text((controller.isLoading.isFalse) ? 'Selesai' : 'Loading...'),
             ),
           ),

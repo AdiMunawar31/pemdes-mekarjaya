@@ -190,7 +190,7 @@ class PresenceController extends GetxController {
           if (jamSekarang > 12 && jamSekarang < 15) {
             checkoutPresence(presenceCollection, todayDocId, position, address, distance, inArea, jam, hari);
           } else {
-            CustomToast.errorToast("Error", "Anda hanya bisa absen pulang pada jam 13:00 - 14:30");
+            CustomToast.errorToast("Error", "Anda hanya bisa absen pulang mulai dari jam 13:00");
           }
         }
       } else {

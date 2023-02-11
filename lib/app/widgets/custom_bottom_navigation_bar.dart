@@ -62,7 +62,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                       margin: const EdgeInsets.only(top: 24),
                       alignment: Alignment.center,
                       child: Text(
-                        "Presence",
+                        "Presensi",
                         style: TextStyle(
                           fontSize: 10,
                           color: AppColor.secondary,
@@ -84,7 +84,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                                     : SvgPicture.asset('assets/icons/profile.svg'),
                               ),
                               Text(
-                                "Profile",
+                                "Profil",
                                 style: TextStyle(
                                   fontSize: 10,
                                   color: AppColor.secondary,

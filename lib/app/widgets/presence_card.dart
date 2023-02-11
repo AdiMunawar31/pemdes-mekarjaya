@@ -25,7 +25,7 @@ class PresenceCard extends StatelessWidget {
         children: [
           // job
           Text(
-            userData["pekerjaan"],
+            (userData["jabatan"] == null) ? '-' : userData["jabatan"],
             style: const TextStyle(
               color: Colors.white,
               fontFamily: 'poppins',
@@ -36,7 +36,7 @@ class PresenceCard extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 4, bottom: 12),
             child: Text(
-              userData["nik"],
+              (userData["nik"] == null) ? '-' : userData["nik"],
               style: const TextStyle(
                 color: Colors.white,
                 fontFamily: 'poppins',

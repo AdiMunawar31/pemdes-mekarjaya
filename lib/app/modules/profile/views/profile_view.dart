@@ -71,7 +71,7 @@ class ProfileView extends GetView<ProfileController> {
                         ),
                       ),
                       Text(
-                        user?["pekerjaan"] != null ? user!['pekerjaan'] : 'Loading...',
+                        user?["jabatan"] != null ? user!['jabatan'] : 'Loading...',
                         style: TextStyle(color: AppColor.secondarySoft),
                       ),
                     ],

@@ -192,9 +192,9 @@ class HomeView extends GetView<HomeController> {
                         ),
                         TextButton(
                           onPressed: () => Get.toNamed(Routes.ALL_PRESENCE),
-                          style: TextButton.styleFrom(
-                            backgroundColor: AppColor.primary,
-                          ),
+                          // style: TextButton.styleFrom(
+                          //   backgroundColor: AppColor.primary,
+                          // ),
                           child: const Text("Lihat Semua"),
                         ),
                       ],

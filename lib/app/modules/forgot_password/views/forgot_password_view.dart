@@ -45,7 +45,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  "Presensi App\nPemdes Mekarjaya",
+                  "Aplikasi Presensi\nPemdes Mekarjaya",
                   style: TextStyle(
                     fontSize: 26,
                     color: Colors.white,
@@ -118,7 +118,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
                       ),
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: InputBorder.none,
-                      hintText: "youremail@email.com",
+                      hintText: "contoh@email.com",
                       hintStyle: TextStyle(
                         fontSize: 14,
                         fontFamily: 'poppins',

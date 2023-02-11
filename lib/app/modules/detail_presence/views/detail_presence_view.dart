@@ -85,17 +85,17 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                 ),
                 const SizedBox(height: 14),
                 const Text(
-                  'status',
+                  'Keterangan',
                   style: TextStyle(color: Colors.white),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  (presenceData["masuk"]?["in_area"] == true) ? "Didalam Area" : "Diluar Area",
+                  (presenceData["masuk"]?["keterangan"] == null) ? "-" : "${presenceData["masuk"]?["keterangan"]}",
                   style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 14),
                 const Text(
-                  'lokasi',
+                  'Lokasi',
                   style: TextStyle(color: Colors.white),
                 ),
                 const SizedBox(height: 4),
@@ -158,7 +158,7 @@ class DetailPresenceView extends GetView<DetailPresenceController> {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  (presenceData["pulang"]?["in_area"] == true) ? "Didalam Area" : "Diluar Area",
+                  (presenceData["masuk"]?["keterangan"] == null) ? "-" : "${presenceData["masuk"]?["keterangan"]}",
                   style: TextStyle(color: AppColor.secondary, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 14),

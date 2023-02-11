@@ -47,7 +47,7 @@ class NewPasswordView extends GetView<NewPasswordController> {
               children: const [
                 SizedBox(height: 30),
                 Text(
-                  "Presensi App\nPemdes Mekarjaya",
+                  "Aplikasi Presensi\nPemdes Mekarjaya",
                   style: TextStyle(
                     fontSize: 26,
                     color: Colors.white,

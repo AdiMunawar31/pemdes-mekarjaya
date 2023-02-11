@@ -32,7 +32,7 @@ class LoginView extends GetView<LoginController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  "Presensi App\nPemdes Mekarjaya",
+                  "Aplikasi Presensi\nPemdes Mekarjaya",
                   style: TextStyle(
                     fontSize: 26,
                     color: Colors.white,
@@ -92,7 +92,7 @@ class LoginView extends GetView<LoginController> {
                       ),
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: InputBorder.none,
-                      hintText: "youremail@email.com",
+                      hintText: "contoh@email.com",
                       hintStyle: TextStyle(
                         fontSize: 14,
                         fontFamily: 'poppins',
@@ -182,9 +182,9 @@ class LoginView extends GetView<LoginController> {
                   alignment: Alignment.centerLeft,
                   child: TextButton(
                     onPressed: () => Get.toNamed(Routes.FORGOT_PASSWORD),
-                    style: TextButton.styleFrom(
-                      backgroundColor: AppColor.secondarySoft,
-                    ),
+                    // style: TextButton.styleFrom(
+                    //   backgroundColor: AppColor.secondarySoft,
+                    // ),
                     child: const Text("Lupa Password?"),
                   ),
                 ),
