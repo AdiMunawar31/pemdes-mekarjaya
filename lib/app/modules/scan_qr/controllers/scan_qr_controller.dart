@@ -126,7 +126,7 @@ class ScanQrController extends GetxController {
           CustomToast.successToast("Berhasil", "Anda sudah absen masuk dan pulang");
         } else {
           // ? : sudah absen masuk tapi belum absen pulang
-          if (jamSekarang > 12 && jamSekarang < 15) {
+          if (jamSekarang > 12) {
             checkoutPresence(presenceCollection, todayDocId);
           } else {
             CustomToast.errorToast("Error", "Anda hanya bisa absen pulang mulai dari jam 13:00");
