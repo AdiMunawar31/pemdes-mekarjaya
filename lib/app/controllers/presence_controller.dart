@@ -37,7 +37,7 @@ class PresenceController extends GetxController {
       // String jamString = DateFormat.Hms().format(now).split(':').first;
       // var jam = int.parse(jamString);
 
-      if (distance <= 15) {
+      if (distance <= 20) {
         await processPresence(position, address, distance);
       } else {
         CustomToast.errorToast("Error", "Pastikan anda berada di wilayah kantor Desa Mekarjaya");
